@@ -8,7 +8,26 @@ export class List extends Component {
   constructor(selector: string) {
     super(selector);
     this.pets = getPets();
+    this.render();
+  }
+
+  render() {
+    super.cleanHtml(this.selector);
     this.template = this.createTemplate();
+    const element = super.render();
+
+    document
+      .querySelectorAll('.button')
+      .forEach((button) =>
+        button.addEventListener('click', this.handleDelete.bind(this))
+      );
+
+    return element;
+  }
+
+  handleDelete(event: Event) {
+    const element = event.target as HTMLParagraphElement;
+    this.pets = this.pets.filter((pet) => pet.id !== element.dataset.id);
     this.render();
   }
 
@@ -22,7 +41,7 @@ export class List extends Component {
       <p>Breed: ${pet.breed}</p>
       <p>Adopted: <input type="checkbox" ${pet.isAdopted ? 'checked' : ''}><p>
       <p>Owner: ${pet.owner}</p>
-      <p class="button" role="button">X</p>
+      <p data-id=${pet.id} class="button" role="button">X</p>
     </li>`
       )
       .join('');
