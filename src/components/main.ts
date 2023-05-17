@@ -1,8 +1,6 @@
 import { Component } from './component';
-import './footer.css';
 
-export class Footer extends Component {
-  // Alt brand: string
+export class Main extends Component {
   constructor(selector: string) {
     super(selector);
     this.template = this.createTemplate();
@@ -10,10 +8,6 @@ export class Footer extends Component {
   }
 
   createTemplate() {
-    return `
-    <footer>
-      <address>ISDI-Coders</address>
-    </footer>
-    `;
+    return `<main class="main"></main>`;
   }
 }

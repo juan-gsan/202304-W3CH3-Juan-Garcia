@@ -1,6 +1,6 @@
 import { Pet } from '../models/pet';
 
-export const petsList = (): Pet[] => [
+export const getPets = (): Pet[] => [
   new Pet('Frank', 'Dog'),
   new Pet('Bethoveen', 'Dog'),
   new Pet('Snowball II', 'Cat'),

@@ -9,7 +9,7 @@ export type PetStructure = {
 
 export class Pet implements PetStructure {
   static generateId() {
-    return Math.trunc(Math.random() * 1_000_000_000_000).toString();
+    return Math.trunc(Math.random() * 1_000_000).toString();
   }
 
   id: string;
