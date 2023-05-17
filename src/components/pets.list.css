@@ -1,0 +1,13 @@
+li {
+  border: 2px solid black;
+}
+
+li p {
+  text-align: center;
+}
+
+.button {
+  color: red;
+  font-weight: bold;
+  font-size: 1.5rem;
+}

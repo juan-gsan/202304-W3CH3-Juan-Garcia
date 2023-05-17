@@ -7,5 +7,5 @@ import './style.css';
 
 new Header('#app');
 new Main('#app');
-new List('.main');
+new List('main');
 new Footer('#app');
