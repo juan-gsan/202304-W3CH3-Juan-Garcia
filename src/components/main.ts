@@ -1,4 +1,5 @@
 import { Component } from './component';
+import './main.css';
 
 export class Main extends Component {
   constructor(selector: string) {
@@ -8,6 +9,6 @@ export class Main extends Component {
   }
 
   createTemplate() {
-    return `<main class="main"></main>`;
+    return `<main></main>`;
   }
 }
